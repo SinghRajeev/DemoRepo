@@ -4,3 +4,4 @@ WebDriver driver;
 System.setProperty("webdriver.gecko.driver","D://eclipse-workspace//Driver//geckodriver//geckodriver.exe");
 		
 driver= new FirefoxDriver();
+driver.get("");

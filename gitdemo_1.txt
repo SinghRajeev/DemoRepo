@@ -1,0 +1,23 @@
+public void select()
+	{
+		driver.findElement(By.linkText("Input Forms")).click();
+		driver.findElement(By.linkText("Select Dropdown List")).click();
+
+		WebElement SelectElement = driver.findElement(By.xpath("//select[@id='select-demo']"));
+		Select oSelect= new Select(SelectElement);
+
+		oSelect.selectByVisibleText("Wednesday");
+		String stringDay = driver.findElement(By.xpath("//p[@class='selected-value']")).getText();
+		String [] arc=stringDay.split("[^a-zA-Z]+");
+		System.out.print(arc[2]);
+		if (arc[2]== "Wednesday")
+		System.out.print("Pass");
+		else 
+			System.out.print("Fail");
+
+		if(arc[2].equals("Wednesday"))
+			System.out.print("Pass-1");
+		else
+			System.out.print("Fail-1");
+
+	}
